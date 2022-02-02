@@ -1,0 +1,36 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: Roboto,helvetica,arial,sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.contentPago {
+  display: flex !important;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+  #content {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .contentPago {
+    padding-top: 100px !important;
+  }
+}

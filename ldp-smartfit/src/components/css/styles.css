@@ -1,0 +1,256 @@
+/* HEADER */
+
+header {
+    --src: url('../../media/logo-grey.svg');
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    width: 67%;
+    background-color: #202020;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 10000;
+}
+
+.headerPago{
+    width: 100%;
+}
+
+#logo {
+    background-image: var(--src);
+    width: 110px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+/* FORMULARIO */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 10%;
+    padding-top: 13%;
+}
+
+#formulario input[type="text"],
+#formulario input[type="phone"],
+#formulario input[type="date"] {
+    width: 70%;
+    height: 50px;
+    border: 2px solid #ccc;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#formulario select {
+    width: 72%;
+    height: 50px;
+    border: 2px solid #ccc;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#formulario select:required:invalid {
+    color: #333;
+  }
+
+#formulario option[value=""][disabled] {
+display: none;
+}
+#formulario option {
+color: #000;
+}
+
+#formulario input[type='radio'],
+#formulario label {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+#formulario input[type='submit'] {
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10%;
+    border-radius: 5px;
+    background-color: #fcb823;
+    color: #202020;
+    border: 2px solid #898b8e;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+#formulario input[type='submit']:hover {
+    background-color: #898b8e;
+}
+
+/* Estilos Aside */
+aside {
+    --height: 0px;
+    height: var(--height);
+    display: flex;
+    position: fixed;
+    right: 0;
+    width: 33.3333%;
+    margin-top: -80px !important;
+    color: white;
+}
+
+aside div {
+    width: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-areas:
+    'plan plan'
+    'mensualidad precio'
+    'copy copy';
+    padding: 0px 25px 0px 25px;
+}
+
+aside h1 {
+    margin: 0px;
+    grid-area: plan;
+    font-size: 50px;
+    margin-bottom: 250px;
+}
+aside #mensualidad {
+    margin-top: -150px;
+    grid-area: mensualidad;
+}
+aside #precio {
+    margin-top: -150px;
+    grid-area: precio;
+}
+aside p {
+    margin-top: -100px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+    #header {
+        display: grid;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: #202020;
+        color: white;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        padding: 10%;
+        padding-top: 25%;
+    }
+
+    #formulario input[type="text"],
+    #formulario input[type="phone"],
+    #formulario input[type="date"] {
+        width: 80%
+    }
+
+    #formulario #black {
+        margin-bottom: 320px;
+    }
+
+    #formulario select {
+        width: 85%;
+    }
+
+    #formulario input[type='submit'] {
+        margin-bottom: -370px;
+        width: 200px;
+        z-index: 10;
+    }
+
+    aside {
+        position: relative;
+        height: 370px !important;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        margin-top: 10px !important;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    aside div {
+        position: inherit;
+        display: grid;
+        grid-gap: 20px;
+        padding: 0px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 50px 50px;
+    }
+
+    aside h1 {
+        padding-left: 20px;
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    aside #mensualidad {
+        margin-top: 70px;
+        padding-left: 20px;
+        grid-area: mensualidad;
+    }
+    aside #precio {
+        margin-top: 70px;
+        padding-left: 20px;
+        grid-area: precio;
+    }
+    aside p {
+        margin-top: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        grid-area: copy;
+    }
+}
+
+/* TARJETA */
+
+#copia-folio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#copia-folio h3 {
+    flex: 4;
+}
+
+#copia-folio #btn-folio {
+    flex: 1;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#copia-folio #btn-folio:hover {
+    background-color: #246cb9;
+}
+
+.folio-copied {
+    background-color: #28a745 !important;
+}
